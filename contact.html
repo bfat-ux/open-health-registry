@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Open Health Registry</title>
+  <meta name="description" content="Get in touch with Open Health Registry. For regulators, ministries of health, funders, and developers building health systems.">
+  <link rel="canonical" href="https://openhealthregistry.org/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="brand" aria-label="Open Health Registry home">
+        <span class="brand-cross" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none"><rect x="11" y="2" width="6" height="24" rx="2" fill="currentColor"/><rect x="2" y="11" width="24" height="6" rx="2" fill="currentColor"/></svg>
+        </span>
+        Open Health Registry
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/about.html">About</a>
+        <a href="/methodology.html">Methodology</a>
+        <a href="/programs/">Programs</a>
+        <a href="/contact.html" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1>Get in touch.</h1>
+      <p>
+        For regulators, ministries, funders, and developers. Early conversations
+        are welcome — OHR is building carefully and input from the field matters.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left: info -->
+        <div class="contact-info reveal">
+          <span class="rule"></span>
+          <h2>Who we want to hear from</h2>
+          <p>
+            Regulatory authorities and ministries of health interested in
+            provider or facility registry infrastructure. Development partners
+            evaluating health data programs. Developers building Nigerian or
+            African health software who want to integrate with the NPR.
+          </p>
+          <p>
+            We respond to every message. If your question is technical,
+            say so and we'll route it appropriately.
+          </p>
+
+          <div style="margin-top: 28px; display: grid; gap: 10px;">
+            <div class="contact-detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:bernard@openhealthregistry.org">bernard@openhealthregistry.org</a>
+            </div>
+            <div class="contact-detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Houston, TX &amp; Lagos, Nigeria</span>
+            </div>
+          </div>
+
+          <div class="status-notice" style="margin-top: 32px;">
+            <strong>Note:</strong> OHR is not yet incorporated and has no staff
+            beyond the founder. Response times are reasonable but not guaranteed
+            to be same-day.
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="reveal">
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://api.htaplus.com/contact"
+            method="POST"
+          >
+            <div class="form-row">
+              <label>
+                Name
+                <input type="text" name="name" required placeholder="Your name">
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" required placeholder="you@example.com">
+              </label>
+            </div>
+
+            <label>
+              Organisation
+              <input type="text" name="org" placeholder="Ministry, funder, company, or independent">
+            </label>
+
+            <label>
+              Subject
+              <select name="subject">
+                <option value="">Select a topic</option>
+                <option value="regulatory">Regulatory partnership</option>
+                <option value="funder">Funding or partnership</option>
+                <option value="integration">NPR API / integration</option>
+                <option value="methodology">Methodology question</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" required placeholder="What would you like to discuss?"></textarea>
+            </label>
+
+            <button type="submit" class="button filled" style="justify-self: start;">Send message</button>
+            <p class="form-status" aria-live="polite"></p>
+            <p class="form-note">We don't share your details with third parties.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <span style="color: var(--teal);" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 28 28" fill="none"><rect x="11" y="2" width="6" height="24" rx="2" fill="currentColor"/><rect x="2" y="11" width="24" height="6" rx="2" fill="currentColor"/></svg>
+          </span>
+          Open Health Registry
+        </div>
+        <p class="footer-tagline">Federated health-data infrastructure for low-resource health systems.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/about.html">About</a>
+        <a href="/methodology.html">Methodology</a>
+        <a href="/programs/">Programs</a>
+        <a href="/programs/nigeria-pharmacy-registry.html">Nigeria Pharmacy Registry</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="yr"></span> Open Health Registry. Not yet incorporated.</p>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
+</body>
+</html>

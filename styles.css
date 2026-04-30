@@ -1,18 +1,20 @@
 :root {
   color-scheme: light;
-  --bg: #fafafa;
-  --surface: #f0f4f8;
-  --ink: #0f2a44;
-  --body: #444444;
-  --muted: #888888;
-  --brand-navy: #0f2a44;
-  --brand-navy-rgb: 15, 42, 68;
-  --teal: #0f766e;
-  --teal-rgb: 15, 118, 110;
-  --teal-soft: #5eead4;
+  --bg: #F9FAF7;              /* Warm White */
+  --surface: #EDE9E1;         /* Sand */
+  --ink: #1F2937;             /* Deep Charcoal */
+  --body: #1F2937;            /* Deep Charcoal */
+  --muted: #6B7D72;           /* Slate Green */
+  --brand-navy: #1B5E3A;      /* Forest Green */
+  --brand-navy-rgb: 27, 94, 58;
+  --teal: #2E7D4E;            /* Heritage Green */
+  --teal-rgb: 46, 125, 78;
+  --teal-soft: #C6E86A;       /* Lemon Green */
+  --lemon-zest: #F4F97C;      /* Lemon Zest */
+  --sage: #BFD2C7;            /* Sage */
   --white-rgb: 255, 255, 255;
-  --border: #e2e8f0;
-  --shadow: 0 4px 24px rgba(15, 42, 68, 0.08);
+  --border: #BFD2C7;          /* Sage */
+  --shadow: 0 4px 24px rgba(27, 94, 58, 0.08);
   --radius: 16px;
   --container: 1080px;
   --content-column: 720px;
@@ -96,7 +98,7 @@ h1, h2, h3, h4 {
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(250, 250, 250, 0.95);
+  background: rgba(249, 250, 247, 0.95);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(10px);
   z-index: 50;
@@ -163,7 +165,7 @@ h1, h2, h3, h4 {
 }
 
 .nav-cta:hover {
-  background: #163a5d !important;
+  background: #164f2e !important;
   color: white !important;
 }
 
@@ -244,7 +246,7 @@ h1, h2, h3, h4 {
 }
 
 .button.primary {
-  background: white;
+  background: var(--teal-soft);
   color: var(--brand-navy);
 }
 
@@ -270,7 +272,7 @@ h1, h2, h3, h4 {
 }
 
 .button.filled:hover {
-  background: #163a5d;
+  background: #164f2e;
   transform: translateY(-1px);
 }
 
@@ -280,7 +282,7 @@ h1, h2, h3, h4 {
 }
 
 .button.teal:hover {
-  background: #0d635c;
+  background: #255f3b;
   transform: translateY(-1px);
 }
 
@@ -500,7 +502,7 @@ h1, h2, h3, h4 {
 }
 
 .text-link:hover {
-  color: #0d635c;
+  color: #255f3b;
 }
 
 /* ── Validation ladder ───────────────────────────────── */

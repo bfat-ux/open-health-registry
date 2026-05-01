@@ -45,11 +45,12 @@
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow">Methodology</span>
-      <h1>How we build registries that get used.</h1>
+      <h1>How we build registries that national systems can actually own and trust.</h1>
       <p>
-        Three interlocking ideas: a trust model that starts honest and earns
-        confidence progressively, an operating model that ends with transfer,
-        and a technology stance that avoids lock-in.
+        Three interlocking ideas guide everything we do: a graduated trust model that
+        starts honest and earns confidence progressively, a Build–Operate–Transfer
+        operating model that ends with full handover, and a technology stance that
+        eliminates vendor lock-in from day one.
       </p>
     </div>
   </section>
@@ -61,17 +62,17 @@
         <span class="rule"></span>
         <h2>The Validation Ladder</h2>
         <p>
-          Registry data is only as useful as it is trustworthy. Most health registries
-          treat all records as equally valid — which means they're equally suspect.
-          OHR's validation ladder assigns an explicit trust level to every record based
-          on the evidence that supports it.
+          Registry data is only useful if it is trustworthy. Most health registries
+          treat every record as equally valid — which means they are equally suspect.
+          OHR's Validation Ladder assigns an explicit, queryable trust level to every
+          record based on the strength of supporting evidence.
         </p>
         <p style="margin-top: 12px;">
-          Records start at L0 the moment they're ingested from any data source.
-          They earn higher levels through progressive verification — each step
-          requires harder-to-fake evidence. Regulators and system integrators can
-          query by level, filter by level, and set minimum-level requirements for
-          specific use cases.
+          Records begin at L0 the moment they are ingested. They rise through
+          progressive verification — each level requires harder-to-fake evidence.
+          Regulators and integrators can query, filter, and set minimum-level
+          requirements for different use cases (e.g., "only L3+ providers may
+          receive e-prescriptions").
         </p>
       </div>
 
@@ -80,35 +81,35 @@
           <div class="ladder-level">L0</div>
           <div class="ladder-body">
             <strong>Mapped</strong>
-            <span>Record ingested from a source dataset. Existence is asserted, not verified. Suitable for planning; not for credentialing.</span>
+            <span>Record ingested from any source dataset. Existence asserted, not verified. Useful for planning and gap analysis.</span>
           </div>
         </div>
         <div class="ladder-rung">
           <div class="ladder-level">L1</div>
           <div class="ladder-body">
             <strong>Contact Confirmed</strong>
-            <span>A phone call, SMS, or in-app reply has been received and logged. The facility or provider is reachable at the listed contact.</span>
+            <span>Phone, SMS, or in-app reply logged. The provider or facility is reachable.</span>
           </div>
         </div>
         <div class="ladder-rung">
           <div class="ladder-level">L2</div>
           <div class="ladder-body">
             <strong>Evidence Documented</strong>
-            <span>GPS coordinates and a timestamped photograph from a field visit. The physical location matches the record.</span>
+            <span>GPS coordinates + timestamped field photograph. Physical location matches the record.</span>
           </div>
         </div>
         <div class="ladder-rung">
           <div class="ladder-level">L3</div>
           <div class="ladder-body">
             <strong>Regulator / Partner Verified</strong>
-            <span>Record cross-referenced with an official dataset from the regulatory authority or a trusted partner. Licence number or registration confirmed.</span>
+            <span>Cross-referenced with official regulatory data or a trusted partner dataset. Licence or registration confirmed.</span>
           </div>
         </div>
         <div class="ladder-rung">
           <div class="ladder-level">L4</div>
           <div class="ladder-body">
             <strong>High-Assurance</strong>
-            <span>In-person audit or biometric check-in. Reserved for high-stakes use cases such as controlled substance dispensing or prescription routing.</span>
+            <span>In-person audit or biometric check-in. Reserved for highest-stakes uses: controlled substances, prescription routing, and similar.</span>
           </div>
         </div>
       </div>
@@ -116,17 +117,15 @@
       <div class="prose reveal" style="margin-top: 40px;">
         <h3>Why graduated trust matters</h3>
         <p>
-          A system that treats unverified and verified records identically can't be
-          used safely for anything that matters. By making trust level explicit and
-          queryable, we allow regulators to enforce minimum standards (e.g. "only
-          L3+ providers can receive e-prescriptions") without requiring that every
-          record be fully verified before the registry becomes useful.
+          A system that cannot distinguish verified from unverified records cannot be
+          used safely for anything important. The ladder lets regulators enforce real
+          standards immediately while still making the registry useful from day one.
+          It also makes progress visible and auditable as verification work advances.
         </p>
         <p>
-          This also creates a path for progressive improvement: a registry that starts
-          at L0 for 6,000 facilities is still useful for planning. As field teams
-          verify records, the useful population for credentialing grows. The ladder
-          makes that progress legible and auditable.
+          This approach directly addresses a recognised gap across African digital health
+          efforts: the need for reliable, cross-organisational identity and verification
+          layers that existing systems often lack.
         </p>
       </div>
     </div>
@@ -137,12 +136,13 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="rule"></span>
-        <h2>Build-Operate-Transfer</h2>
+        <h2>Build–Operate–Transfer</h2>
         <p>
-          BOT is not new. It's a proven model for infrastructure development. OHR
-          applies it to health data: we build what's needed, operate it through the
-          transition period, and hand it off. The national authority ends up owning
-          a running system, not a dependency.
+          We apply a proven infrastructure model to health data registries. We build
+          what is needed, operate it with local teams during the transition, and
+          transfer full ownership — code, data, documentation, and institutional
+          knowledge — so the national authority ends up with a running system,
+          not a dependency.
         </p>
       </div>
 
@@ -150,28 +150,27 @@
         <div class="pillar-card">
           <h3>Build</h3>
           <p>
-            Every design decision is made with handover in mind. We use open
-            standards, document as we go, and avoid architectural choices that
-            would make future maintenance dependent on OHR. The codebase belongs
-            to the partner from day one.
+            Every design decision is made with eventual handover in mind. We use only
+            open standards, document continuously, and avoid any architecture that
+            would require OHR's ongoing involvement. The codebase belongs to the
+            partner country from day one.
           </p>
         </div>
         <div class="pillar-card">
           <h3>Operate</h3>
           <p>
-            During the operate phase we run the system alongside counterpart staff,
-            not instead of them. Training is built into the operating rhythm. We
-            refine workflows with the regulator, validate data quality, and monitor
-            for issues — while building institutional capacity in parallel.
+            We run the system <em>with</em> counterpart staff, not instead of them.
+            Training is embedded in daily operations. We refine workflows together,
+            validate data quality, and build local capacity in parallel.
           </p>
         </div>
         <div class="pillar-card">
           <h3>Transfer</h3>
           <p>
-            Transfer is a planned event, not a handoff that happens when funding ends.
-            We define transfer criteria at the start of each engagement: what
-            capabilities must exist, what data must meet what quality thresholds,
-            what staff must be trained. Transfer happens when those criteria are met.
+            Transfer is a planned milestone, not something that happens when funding
+            ends. We define clear criteria at the start of each engagement — technical
+            capabilities, data quality thresholds, trained personnel. Transfer occurs
+            only when those criteria are met.
           </p>
         </div>
       </div>
@@ -183,42 +182,46 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="rule"></span>
-        <h2>Open standards first</h2>
+        <h2>Open standards, no lock-in</h2>
         <p>
-          Every technology choice is evaluated against one question: will this make
-          the system harder to transfer, maintain, or integrate? Proprietary databases,
-          vendor-specific APIs, and closed formats all fail that test. OHR builds on
-          standards that are well-documented, widely implemented, and owned by no one.
+          Every technology choice is tested against one question: "Will this make
+          the system harder for the national authority to maintain, modify, or
+          integrate after we leave?" We build exclusively on standards that are
+          well-documented, widely implemented, and owned by no one.
         </p>
       </div>
 
       <div class="standards-grid reveal">
         <div class="standard-item">
           <code>FHIR R4</code>
-          <p>Interoperability mappings for provider and facility resources. Ensures registry data can be consumed by any FHIR-compatible system.</p>
+          <p>Interoperability for provider, facility, and patient resources. Registry data works with any FHIR-compatible system.</p>
         </div>
         <div class="standard-item">
           <code>OpenAPI 3.1</code>
-          <p>All REST surfaces documented in machine-readable specs. Integrators can generate client libraries without waiting for OHR.</p>
+          <p>All APIs documented in machine-readable specs so integrators can generate clients immediately.</p>
         </div>
         <div class="standard-item">
           <code>PostgreSQL + PostGIS</code>
-          <p>Open-source relational database with geospatial extensions. No licence cost, no vendor lock-in, runs anywhere.</p>
+          <p>Open-source, battle-tested database with geospatial support. Runs anywhere with no licence fees.</p>
         </div>
         <div class="standard-item">
           <code>OpenStreetMap</code>
-          <p>Geospatial basemap and administrative boundary data. Community-maintained; no API dependency for core functionality.</p>
+          <p>Community-maintained geospatial basemap and boundaries. No paid API dependency.</p>
         </div>
       </div>
 
       <div class="prose reveal" style="margin-top: 40px;">
         <h3>What "no lock-in" means in practice</h3>
         <p>
-          When OHR transfers a system to a national authority, that authority can
-          host it on any cloud provider, modify it with any developer who knows
-          PostgreSQL and Python, and integrate it with any system that speaks FHIR
-          or REST. There is no OHR SDK required, no OHR licence to renew, no OHR
-          API that goes away if we close.
+          When transfer happens, the national authority can host the system on any
+          cloud provider, maintain it with any developer familiar with PostgreSQL
+          and Python, and integrate it with any system that speaks FHIR or REST.
+          There is no OHR-specific code, licence, or API that disappears when we leave.
+        </p>
+        <p>
+          This stance aligns with the OpenHIE community's emphasis on sustainable,
+          locally owned health information exchange — while focusing specifically on
+          delivering the critical registry layer with a clear exit path.
         </p>
       </div>
     </div>
@@ -228,15 +231,14 @@
   <section class="section navy">
     <div class="container">
       <div style="max-width: 560px;" class="reveal">
-        <span class="eyebrow">See it applied</span>
+        <span class="eyebrow">See it in practice</span>
         <span class="rule" style="background: var(--teal-soft);"></span>
         <h2>Nigeria Pharmacy Registry</h2>
         <p style="color: rgba(255,255,255,0.7); margin-bottom: 28px; line-height: 1.7;">
-          The NPR is OHR's first program — 6,891 dispensing endpoints, FHIR R4-compliant,
-          with the validation ladder applied from ingestion. Read how the methodology
-          works in a real registry.
+          OHR's first live application of this methodology — 6,891 dispensing endpoints,
+          FHIR R4-compliant, with the Validation Ladder applied from the first record.
         </p>
-        <a href="/programs/nigeria-pharmacy-registry.html" class="button primary">View the NPR</a>
+        <a href="/programs/nigeria-pharmacy-registry.html" class="button primary">View the Nigeria Pharmacy Registry</a>
       </div>
     </div>
   </section>

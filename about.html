@@ -47,8 +47,9 @@
       <span class="eyebrow">About OHR</span>
       <h1>What we are and why we exist.</h1>
       <p>
-        A nonprofit infrastructure organization. We build the data layer that
-        national health systems need but rarely have the capacity to build alone.
+        A nonprofit infrastructure organization building the foundational data layer
+        that national health systems in low-resource settings need — but rarely have
+        the capacity to build on their own.
       </p>
     </div>
   </section>
@@ -60,43 +61,59 @@
         <span class="rule"></span>
         <h2>The problem</h2>
         <p>
-          Digital health in low-resource settings fails at a predictable point: systems
-          can't verify the people and places they're meant to connect. Is this pharmacist
-          licensed? Does this clinic exist? Is this the same patient who visited last month?
+          Digital health fails at a predictable point in many low- and middle-income
+          countries: systems cannot reliably verify the people and places they are meant
+          to connect. Is this pharmacist licensed? Does this clinic still exist? Is this
+          the same patient who visited last month?
         </p>
         <p>
-          Without reliable answers to those questions, e-prescriptions can't be safely
-          routed, referrals go to facilities that have closed, and patient records
-          accumulate duplicates that clinicians can't trust. The problem isn't
-          a shortage of health software. It's a shortage of the foundational data
-          layer that health software depends on.
+          Without trustworthy answers, e-prescriptions get routed to the wrong person,
+          referrals land at closed facilities, and patient records accumulate duplicates
+          that clinicians cannot trust. The root cause is not a shortage of health
+          software. It is a shortage of the foundational data layer — provider
+          verification, facility registries, and patient identity resolution — that every
+          digital health system depends on.
+        </p>
+        <p>
+          Many countries are adopting the OpenHIE architecture as their blueprint. While
+          this provides a strong framework, the critical registry components are often
+          built piecemeal, remain donor-dependent for years, or never achieve full
+          national ownership.
         </p>
 
         <h2>What OHR builds</h2>
+        <p>Open Health Registry builds and transfers that missing foundational layer:</p>
+        <ul>
+          <li><strong>Provider verification registries</strong> with structured trust levels</li>
+          <li><strong>Facility databases</strong> with field verification and geospatial data</li>
+          <li><strong>Patient identity resolution</strong> infrastructure that works across organizations without forcing centralization</li>
+        </ul>
         <p>
-          Open Health Registry builds and transfers that foundational layer:
-          provider verification registries, facility databases, and patient identity
-          resolution infrastructure. Each component is built on open standards —
-          FHIR R4, OpenAPI, PostgreSQL — with no proprietary lock-in.
-        </p>
-        <p>
-          The operating model is Build-Operate-Transfer. We build the system, operate
-          it through the transition period, and transfer ownership — code, data, and
-          operational knowledge — to the national authority. The country's data stays
-          sovereign. The methodology stays with OHR and gets applied to the next country.
+          Every component uses open standards — FHIR R4, OpenAPI 3.1, PostgreSQL + PostGIS —
+          so there is never proprietary lock-in. The operating model is
+          <strong>Build–Operate–Transfer</strong>: we build the system, run it through the
+          transition period with local teams, and hand over complete ownership of code,
+          data, and operational knowledge to the national authority. The country's data
+          stays sovereign. The methodology stays with OHR and is reused in the next country.
         </p>
 
         <h2>How OHR is different</h2>
         <p>
-          Most health informatics projects are designed to be maintained by the vendor
-          indefinitely. OHR is designed to become unnecessary. We document for handover
-          from day one, train counterpart institutions during the operate phase, and
-          define success as the moment the national authority no longer needs us.
+          Most health informatics projects are designed to be maintained indefinitely by
+          vendors or implementing partners. OHR is explicitly designed to become unnecessary.
         </p>
         <p>
-          We also don't fabricate consensus or overstate status. As of April 2026,
-          OHR has one active program (the Nigeria Pharmacy Registry), one regulatory
-          conversation initiated (PCN), and no external users yet. We're building carefully.
+          We document for handover from day one. We train counterpart institutions during
+          the operate phase. We define success as the moment the national authority no
+          longer needs us. This "registry + transfer" focus sets us apart in a landscape
+          where many initiatives deliver valuable components but leave countries with
+          ongoing dependencies.
+        </p>
+        <p>
+          We also do not overstate progress. As of April 2026, OHR has one active program
+          (the Nigeria Pharmacy Registry with 6,891 records), one regulatory conversation
+          initiated with the Pharmacy Council of Nigeria (April 27, 2026), and no external
+          users yet. We are building carefully and transparently.
         </p>
       </div>
     </div>
@@ -108,14 +125,17 @@
       <div style="max-width: var(--content-column);">
         <div class="section-header reveal" style="margin-bottom: 28px;">
           <span class="rule"></span>
-          <h2>Current status</h2>
+          <h2>Current status — Honest accounting, April 2026</h2>
         </div>
         <div class="status-notice reveal">
-          <strong>Honest accounting, April 2026:</strong> OHR is not yet incorporated.
-          There is no board. No funder commitments have been made. The Nigeria Pharmacy
-          Registry has 6,891 records and is in active development; no external users
-          are live yet. A regulatory conversation with PCN was initiated April 27, 2026.
-          The site reflects what is true, not what is planned.
+          <ul style="margin: 0; padding-left: 20px; display: grid; gap: 6px;">
+            <li>OHR is not yet incorporated</li>
+            <li>No board</li>
+            <li>No funder commitments</li>
+            <li>Nigeria Pharmacy Registry: 6,891 records in active development; no external users live yet</li>
+            <li>Regulatory conversation with PCN initiated April 27, 2026</li>
+          </ul>
+          <p style="margin: 12px 0 0; color: var(--muted); font-size: 0.88rem;">The site reflects what is true today, not what is planned.</p>
         </div>
       </div>
     </div>
@@ -136,15 +156,21 @@
           </div>
           <div>
             <p class="founder-name">Bernard Fatoye, MBBS, MPA</p>
-            <p class="founder-title">Founder, Open Health Registry</p>
+            <p class="founder-title">Founder &amp; Executive Director, Open Health Registry</p>
             <p class="founder-bio">
-              Nigerian-trained physician (MBBS, University of Ilorin) with a Master
-              of Public Administration from Texas A&amp;M University. Bernard works as
-              a Senior Clinical Informatics Specialist in the United States and has
-              spent his career at the intersection of medicine and health information
-              systems. He founded OHR to build the data infrastructure that Nigerian
-              and African health systems need to make digital health work in practice,
-              not just in pilots.
+              Nigerian-trained physician (MBBS, University of Ilorin) with a Master of
+              Public Administration from Texas A&amp;M University. Bernard currently works
+              as a Senior Clinical Informatics Specialist in the United States, where he
+              has spent the last decade at the intersection of frontline medicine and health
+              information systems.
+            </p>
+            <p class="founder-bio" style="margin-top: 12px;">
+              He founded Open Health Registry after repeatedly seeing the same pattern:
+              ambitious digital health projects in Nigeria and across Africa that failed
+              not because of technology, but because the foundational data layer —
+              verified providers, accurate facilities, and reliable patient identity —
+              simply did not exist. OHR exists to close that gap with infrastructure that
+              national systems can truly own.
             </p>
           </div>
         </div>
@@ -158,11 +184,11 @@
       <div style="max-width: 560px;" class="reveal">
         <span class="eyebrow">Get involved</span>
         <span class="rule" style="background: var(--teal-soft);"></span>
-        <h2>Regulators, ministries, funders</h2>
+        <h2>Regulators, ministries, and funders</h2>
         <p style="color: rgba(255,255,255,0.7); margin-bottom: 28px; line-height: 1.7;">
           If you work in health data governance, digital health policy, or development
-          finance and want to understand what OHR is building — or where it might fit
-          your agenda — we'd like to talk.
+          finance and want to understand what OHR is building — or explore how it might
+          fit your agenda — we would like to talk.
         </p>
         <a href="/contact.html" class="button primary">Contact us</a>
       </div>

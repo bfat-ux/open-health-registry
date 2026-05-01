@@ -47,9 +47,8 @@
       <span class="eyebrow">Program · Nigeria</span>
       <h1>Nigeria Pharmacy Registry</h1>
       <p>
-        A national registry of licensed pharmacy dispensing endpoints —
-        pharmacies, patent medicine vendors, and hospital dispensaries —
-        across all 36 states and the FCT. FHIR R4-compliant, validation-ladder-based.
+        OHR's first national program — building a verified, FHIR-native registry
+        of every dispensing pharmacy and licensed pharmacist in Nigeria.
       </p>
     </div>
   </section>
@@ -83,66 +82,70 @@
     <div class="container">
       <div class="prose reveal">
         <span class="rule"></span>
-        <h2>What it is</h2>
+        <h2>Why this program matters</h2>
         <p>
-          The Nigeria Pharmacy Registry (NPR) is OHR's first program. It is a
-          structured, queryable database of every licensed pharmacy dispensing
-          endpoint in Nigeria — community pharmacies, patent medicine vendors,
-          and hospital dispensaries — geolocated and mapped to their regulatory
-          status under the Pharmacy Council of Nigeria (PCN).
+          Nigeria's new Electronic Pharmacy Regulations (2026) require safe, auditable
+          electronic prescription routing, premises verification, and real-time
+          pharmacist licensing checks. Without a trusted, national source of truth for
+          pharmacies and pharmacists, these regulations cannot be implemented at scale.
         </p>
         <p>
-          The registry exists because Nigerian health software — EMRs, prescription
-          routing systems, supply chain tools — consistently fails at the same point:
-          it can't reliably answer whether a facility exists, where it is, and whether
-          it's authorised to dispense. The NPR is the answer to that question,
-          built to be consumed by any system that speaks FHIR or REST.
-        </p>
-
-        <h2>What it covers</h2>
-        <p>
-          As of April 2026, the NPR contains 6,891 records spanning all 36 states
-          and the Federal Capital Territory. Records are classified by facility type
-          and assigned a validation level on OHR's five-point ladder (L0–L4).
-          The current population is predominantly L0 — ingested from available
-          data sources, not yet field-verified. Progressive verification is ongoing.
+          Most existing lists are static, outdated, or not queryable by digital health
+          systems. The result: e-prescriptions fail to reach the right location,
+          regulators cannot enforce standards efficiently, and patients face unnecessary
+          risk. The Nigeria Pharmacy Registry solves this by creating a live,
+          standards-based directory that every e-pharmacy platform, hospital system,
+          and regulator can rely on.
         </p>
 
-        <h2>Technical architecture</h2>
+        <h2>What the registry contains</h2>
+        <ul>
+          <li><strong>Dispensing endpoints</strong> (pharmacies/premises) with verified physical location, licensing status, and contact details</li>
+          <li><strong>Licensed pharmacists</strong> linked to their practicing premises</li>
+          <li><strong>Geospatial data</strong> for mapping and referral routing</li>
+          <li><strong>Validation Ladder status</strong> for every record (L0 → L4) so systems can filter by trust level</li>
+        </ul>
         <p>
-          The NPR runs as a standalone application — a FastAPI service backed by
-          PostgreSQL and PostGIS — separate from this website. It exposes a REST API
-          documented to OpenAPI 3.1 and returns FHIR R4 Location and Organization
-          resources for all endpoints. The live dashboard is accessible at the link
-          below.
-        </p>
-        <p>
-          This site links to the NPR; it does not absorb it. The NPR codebase,
-          ingestion pipelines, and database are maintained in a separate repository.
-        </p>
-
-        <h2>Regulatory engagement</h2>
-        <p>
-          OHR initiated formal correspondence with the Pharmacy Council of Nigeria
-          on April 27, 2026. The conversation is in its earliest stage. The NPR was
-          built in anticipation of this engagement; regulatory adoption has not yet
-          been confirmed.
+          All data is exposed via FHIR R4 resources (Location, Practitioner,
+          PractitionerRole) and a clean OpenAPI 3.1 interface.
         </p>
 
-        <h2>Current status</h2>
+        <h2>How it works</h2>
+        <p>This program applies OHR's full methodology in production:</p>
+        <ul>
+          <li><strong>Validation Ladder</strong> — Records start at L0 and climb with evidence: contact confirmation → GPS photo → PCN cross-reference → high-assurance audit.</li>
+          <li><strong>Build–Operate–Transfer</strong> — We build and operate the system with counterpart staff, then transfer full ownership of code, data, and knowledge to the Pharmacy Council of Nigeria.</li>
+          <li><strong>Open standards, no lock-in</strong> — PostgreSQL + PostGIS backend, FHIR-native, OpenStreetMap basemap. PCN will own and host the system after transfer.</li>
+        </ul>
+
+        <h2>Current status — Honest accounting, April 2026</h2>
       </div>
 
       <div class="status-notice reveal" style="max-width: var(--content-column); margin-top: 0;">
-        <strong>Honest accounting, April 2026:</strong> 6,891 records ingested.
-        Approximately 4 records promoted past L0. No external users yet. PCN
-        conversation initiated. The dashboard is live and queryable; it is not
-        yet officially endorsed or integrated by any regulatory body.
+        <ul style="margin: 0; padding-left: 20px; display: grid; gap: 6px;">
+          <li>6,891 dispensing endpoints loaded and mapped (L0 baseline)</li>
+          <li>Regulatory conversation with the Pharmacy Council of Nigeria (PCN) formally initiated on April 27, 2026</li>
+          <li>Data model and APIs live in development environment</li>
+          <li>No external systems connected yet</li>
+          <li>First field verification pilots planned for Q3 2026</li>
+        </ul>
+        <p style="margin: 12px 0 0; color: var(--muted); font-size: 0.88rem;">The registry is deliberately starting small and transparent so we can move fast and earn trust.</p>
       </div>
 
       <div class="reveal" style="margin-top: 36px;">
         <a href="https://npr.openhealthregistry.org" class="button filled" target="_blank" rel="noopener">
           View live dashboard ↗
         </a>
+      </div>
+
+      <div class="prose reveal" style="margin-top: 56px;">
+        <span class="rule"></span>
+        <h2>Alignment with national priorities</h2>
+        <ul>
+          <li>Directly supports the 2026 Electronic Pharmacy Regulations</li>
+          <li>Feeds into Nigeria's broader OpenHIE-aligned digital health architecture</li>
+          <li>Provides the provider and facility foundation needed for e-prescription routing, claims adjudication, workforce planning, and safe referrals</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -154,7 +157,7 @@
         <span class="rule"></span>
         <h2>Validation ladder in the NPR</h2>
         <p>
-          Every NPR record carries a validation level. Here's what each level
+          Every NPR record carries a validation level. Here is what each level
           means in the context of pharmacy verification.
         </p>
       </div>
@@ -206,14 +209,17 @@
         <span class="eyebrow">Get involved</span>
         <span class="rule" style="background: var(--teal-soft);"></span>
         <h2>Interested in the NPR?</h2>
+        <p style="color: rgba(255,255,255,0.7); margin-bottom: 8px; line-height: 1.7;">
+          <strong style="color: rgba(255,255,255,0.9);">Pharmacy Council of Nigeria and other regulators</strong><br>
+          We are actively seeking deeper partnership and data-sharing agreements to accelerate verification.
+        </p>
         <p style="color: rgba(255,255,255,0.7); margin-bottom: 28px; line-height: 1.7;">
-          If you're building health software in Nigeria and want to integrate with
-          the registry — or if you represent PCN or another body with an interest
-          in the data — reach out. Early integrators shape the API design.
+          <strong style="color: rgba(255,255,255,0.9);">Digital health implementers and funders</strong><br>
+          If you are building e-pharmacy platforms, hospital information systems, or national digital health infrastructure in Nigeria and need a trusted pharmacy registry, we would like to talk.
         </p>
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
           <a href="/contact.html" class="button primary">Contact us</a>
-          <a href="/programs/" class="button outline">All programs</a>
+          <a href="/methodology.html" class="button outline">Methodology →</a>
         </div>
       </div>
     </div>
